@@ -1,0 +1,3 @@
+export USERNAME=drkiq
+export PASSWORD=yourpassword
+export TOKEN=asecuretokenwouldnormallygohere
