@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: drkiq-postgres
+    app: drkiq
   name: drkiq-postgres
 spec:
   accessModes:

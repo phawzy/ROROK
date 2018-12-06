@@ -1,0 +1,21 @@
+kind: PodPreset
+apiVersion: settings.k8s.io/v1alpha1
+metadata:
+  name: stuff
+  namespace: default
+  labels:
+    app: drkiq
+spec:
+  selector:
+    matchLabels:
+      io.kompose.service: drkiq
+      io.kompose.service: sidkiq
+  env:
+    - name: CACHE_URL
+      value: "redis://redis:6379/0"
+    - name: JOB_WORKER_URL
+      value: "redis://redis:6379/0"
+    - name: LISTEN_ON
+      value: "0.0.0.0:8000"
+    - name: WORKER_PROCESSES
+      value: "1"

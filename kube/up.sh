@@ -10,3 +10,16 @@ kubectl create -f deploy/
 kubectl create -f jobs/
 kubectl create -f drkiq-configmap.yaml
 kubectl create -f drkiq-secret.yaml
+
+port=`kubectl get svc | grep drkiq | awk '{print $5}' | sed -n "s/^.*:\s*\(\S*\)\/.*$/\1/p"`
+
+if hash minikube 2>/dev/null; then
+    ip=`minikube ip`
+    url=${ip}:${port}
+    echo "service is reacable via ${url}"
+    if hash firefox 2>/dev/null; then
+        firefox ${url}
+    elif hash google-chrome 2>/dev/null; then
+        google-chrome ${url}
+    fi
+fi

@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: drkiq-redis
+    app: drkiq
   name: drkiq-redis
 spec:
   accessModes:

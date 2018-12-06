@@ -55,13 +55,25 @@ kubectl set image deploy/drkiq  drkiq=<new_image_name>:<tag>
 kubectl set image deploy/sidekiq  sidekiq=<new_image_name>:<tag>
 ```
 
+##### Cleanup
+-------------
+```sh
+cd kube
+source delete.sh
+```
+
+
 #### Enhancements
 
 * use statefulset for database and redis
 * use rediness and liveness probes
 * use another namespace 
 * add travis build or jenkins pipeline to automate image build/push and deployment
+* add memort and cpu requests and limits and more app replicas number
 
+#### Issues
+* Couldn't use podpreset to inject env vars by label selector but cant activate the admission controller plugin >> [issue1]
 
 
    [MINIKUBE]: <https://kubernetes.io/docs/setup/minikube>
+   [issue1]: <https://github.com/kubernetes/minikube/issues/2353>

@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: redis
+    app: drkiq
   name: redis
 spec:
   ports:
