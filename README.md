@@ -22,12 +22,13 @@ For installing Kubernetes cluster on a local vm use [MINIKUBE]
 Dillinger uses a number of open source projects to work properly:
 
 *  Deployments : for rails app and sidekiq and currently for redis and postgres
-*  Services : for accessing the deployed services
+*  Services : for accessing the deployed services internally and using node port for externally
 *  Persistent Volumes and claims : for data in postfres and redis to persist
 *  job : for migrating database
 *  configmaps and secrets : to store config and sensetive data
 *  scripts : to config/start/delete the app stack 
 
+P.S. node port protocol was chosen for local but for clusters we can use load balancer or ingress rules
 
 ### Installation
 

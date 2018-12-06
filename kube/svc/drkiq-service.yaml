@@ -10,12 +10,14 @@ metadata:
     app: drkiq
   name: drkiq
 spec:
+  type: NodePort
   ports:
   - name: "8000"
     port: 8000
     targetPort: 8000
+    nodePort: 31036
+    protocol: TCP
   selector:
     io.kompose.service: drkiq
-  type: LoadBalancer
 status:
   loadBalancer: {}
