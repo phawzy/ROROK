@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: drkiq-job
-        image: phawzy/drkiq:0.1
+        image: phawzy/drkiq:0.2
         command: ["/bin/sh","-c"]
         args: ["bundle exec rake db:reset && bundle exec rake db:migrate"]
         env:

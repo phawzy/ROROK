@@ -39,7 +39,7 @@ spec:
           value: asecuretokenwouldnormallygohere
         - name: WORKER_PROCESSES
           value: "1"
-        image: phawzy/drkiq:0.1
+        image: phawzy/drkiq:0.2
         name: sidekiq
         resources: {}
       restartPolicy: Always

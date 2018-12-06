@@ -32,7 +32,7 @@ spec:
         envFrom:
         - configMapRef:
             name: drkiq
-        image: phawzy/drkiq:0.1
+        image: phawzy/drkiq:0.2
         name: drkiq
         ports:
         - containerPort: 8000
