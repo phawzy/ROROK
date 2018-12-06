@@ -12,7 +12,7 @@ Ruby on Rails on Kubernetes(ROROK) : sample ror app with docker and kube manifes
 # deployment
     
 Prerequestes:
-  - Docker, docker-compose installed (for local)
+  - [Docker], [Docker-Compose] installed (for local)
   - Kubectl configured with Kubernetes cluster (for kubernetes)
 
 For installing Kubernetes cluster on a local vm use [MINIKUBE]
@@ -70,10 +70,21 @@ source delete.sh
 * use another namespace 
 * add travis build or jenkins pipeline to automate image build/push and deployment
 * add memort and cpu requests and limits and more app replicas number
+* add more replicas for app and db and use HPA
+* use better handling for securing secrets like maybe hashicorp vault
+
+#### Tested Version
+
+* Docker : 18.06.1-ce
+* Docker Compose : 1.18.0
+* minikube : v0.30.0
+* Kubectl : client==v1.12.2 , server==v1.10.0
 
 #### Issues
 * Couldn't use podpreset to inject env vars by label selector but cant activate the admission controller plugin >> [issue1]
 
 
+   [Docker]: <https://docs.docker.com/install/>
+   [Docker-Compose]: <https://docs.docker.com/compose/install/>
    [MINIKUBE]: <https://kubernetes.io/docs/setup/minikube>
    [issue1]: <https://github.com/kubernetes/minikube/issues/2353>
